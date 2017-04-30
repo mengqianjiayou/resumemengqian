@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简历</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="container">
+    <section class="wrapper">
+        <!--第一屏-->
+        <section id="page1" class="slide slide1">
+            <!--<div class="i-circle">-->
+
+                <!--<div class="i-rotate"></div>-->
+            <!--</div>-->
+            <div class="square">
+                <ul></ul>
+                <ul></ul>
+                <ul></ul>
+                <ul></ul>
+                <ul></ul>
+                <ul></ul>
+                <ul></ul>
+                <ul></ul>
+                <ul></ul>
+                <ul></ul>
+                <div class="bottom-circle">
+                    <i></i>
+                    <em></em>
+                    <b></b>
+                </div>
+            </div>
+            <div class="content">
+                <img src="img/silde-1-strong.png" alt="">
+                <img src="img/silde-1-lion.png" alt="">
+                <img src="img/slide-1-2.png" alt="">
+                <img src="img/slide-1-3.png" alt=""><i></i>
+            </div>
+            <div class="introduct">
+                <div>
+                    <img src="img/introduct.png" alt="">
+                </div>
+                <img src="img/renwu.png" alt="">
+                <img src="img/web.png" alt="">
+                <img src="img/name.png" alt="">
+                <img src="img/sex.png" alt="">
+                <img src="img/xingzuo.png" alt="">
+                <img src="img/menpai.png" alt="">
+                <img src="img/eval.png" alt="">
+                <img src="img/mengqian.png" alt="">
+                <img src="img/nv.png" alt="">
+                <img src="img/xingzuo2.png" alt="">
+                <img src="img/hengshui.png" alt="">
+                <img src="img/benke.png" alt="">
+            </div>
+
+        </section>
+        <!--第二屏-->
+        <section id="page2" class="slide slide2">
+            <img src="img/chengzhang.png" alt="">
+            <i class="one"></i>
+            <i class="two"></i>
+            <i class="three"></i>
+            <i class="four"></i>
+
+            <span class="one">2011.9-2015.6</span>
+            <span class="two">2015.6-2016.1</span>
+            <span class="three">2016.2-2016.9</span>
+            <span class="four">2016.9-2017.5</span>
+            <p class="one">就读于衡水学院</p>
+            <p class="two">就读于衡水学院</p>
+            <p class="three">就读于衡水学院</p>
+            <p class="four">就读于衡水学院</p>
+            <b class="one"></b>
+            <b class="two"></b>
+            <b class="three"></b>
+        </section>
+        <!--第三屏-->
+    </section>
+
+</section>
+</body>
+</html>
+<script>
+    ;(function (desw) {
+        var winw = document.documentElement.clientWidth;
+        var ratio = winw/desw;
+        document.documentElement.style.fontSize = ratio*100 +'px';
+    })(750);
+    var container = document.getElementsByClassName('container')[0],
+        wrapper = container.getElementsByClassName('wrapper')[0],
+        square = wrapper.getElementsByClassName('square')[0],
+        oUl = square.getElementsByTagName('ul'),
+        winHeight = document.documentElement.clientHeight;
+    function creatLi() {
+        var winw = document.documentElement.clientWidth;
+        for (var i = 0; i < oUl.length; i++) {
+            var curUl = oUl[i],
+                ulHeight = 0;
+            while (ulHeight < winHeight) {
+                var curLi = document.createElement('li');
+                var random = (Math.round(Math.random() * 100 + 50)) / 100;
+                curLi.style.height = random + 'rem';
+                curUl.appendChild(curLi);
+                ulHeight += random * 100 * (winw / 750);
+            }
+        }
+    }
+    creatLi();
+    function fadeIn() {
+        var olis = square.getElementsByTagName('li');
+        for(var i= 0;i<olis.length;i++){
+            var random = (Math.random()*4+7.3)+'s';
+//            var ran2 = Math.round(Math.random()*400-200)+'px';
+//            olis[i].style.webkitTransform = 'translateZ('+ran2+')';
+//            olis[i].style.transform = 'translateZ('+ran2+')';
+            olis[i].style.webkitAnimationDelay = random;
+            olis[i].style.animationDelay = random;
+        }
+    }
+    fadeIn();
+    var slides = container.getElementsByClassName('slide');
+    var slidesAry = [].slice.call(slides,0);
+    var index = 0;
+    function setSlide() {
+        for (var i =0;i<slidesAry.length;i++){
+            if(i == index){
+//                console.log(1);
+                slidesAry[i].style.display = 'block';
+                slidesAry[i].style.opacity = 1;
+                slidesAry[i].style.zIndex = 1;
+            }else{
+                slidesAry[i].style.display = 'none';
+                slidesAry[i].style.opacity = 0;
+                slidesAry[i].style.zIndex = 0;
+            }
+        }
+    }
+    function autoMove() {
+        index ++;
+        if(index == slidesAry.length){
+            index = 0;
+        }
+        setSlide();
+    }
+    var timer = setInterval(autoMove,18000);
+</script>

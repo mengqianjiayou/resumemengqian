@@ -1,0 +1,771 @@
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    font-size: 100px;
+}
+ul,li{
+    list-style: none;
+}
+html,body,.container,.wrapper{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.container .slide:nth-child(1){
+    width:100%;
+    height:100%;
+    padding-top:.3rem;
+    background:url("../img/bg1-1.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    /*opacity:0;*/
+    z-index:1;
+    transition: all 1s;
+}
+
+/*加载圆形*/
+/*.container .slide:nth-child(1) .i-circle{
+    position: relative;
+    z-index:3;
+    margin:5rem auto;
+    width:4rem;
+    height:4rem;
+    border-radius: 50%;
+    border:2px solid #fff;
+    animation: borderColorChange linear 10s infinite both;
+}
+.container .slide:nth-child(1) .i-rotate{
+    position: absolute;
+    z-index:3;
+    left:.52rem;
+    top:.52rem;
+    width:.1rem;
+    height:.1rem;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 .05rem .05rem #fff;
+    transform-origin:1.48rem 1.48rem;
+    animation: rotate linear 5s infinite both,rotateColorChange linear 10s infinite both;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+        background-color: #fff;
+        box-shadow: 0 0 .05rem .05rem #fff;
+    }
+    25%{
+        background-color: yellowgreen;
+        box-shadow: 0 0 .05rem .05rem yellowgreen;
+    }
+    50%{
+        background-color: greenyellow;
+        box-shadow: 0 0 .05rem .05rem greenyellow;
+    }
+    75%{
+        background-color: yellowgreen;
+        box-shadow: 0 0 .05rem .05rem yellowgreen;
+    }
+    100%{
+        transform: rotate(360deg);
+        background-color: #fff;
+        box-shadow: 0 0 .05rem .05rem #fff;
+    }
+}
+@keyframes borderColorChange {
+    0%{
+        border-color: #fff;
+    }
+    25%{
+        border-color: yellowgreen;
+    }
+    50%{
+        border-color: greenyellow;
+    }
+    75%{
+        border-color: yellowgreen;
+    }
+    100%{
+        border-color: #fff;
+    }
+}
+@keyframes rotateColorChange {
+    0%{
+        background-color: #fff;
+        box-shadow: 0 0 .05rem .05rem #fff;
+    }
+    25%{
+        background-color: yellowgreen;
+        box-shadow: 0 0 .05rem .05rem yellowgreen;
+    }
+    50%{
+        background-color: greenyellow;
+        box-shadow: 0 0 .05rem .05rem greenyellow;
+    }
+    75%{
+        background-color: yellowgreen;
+        box-shadow: 0 0 .05rem .05rem yellowgreen;
+    }
+    100%{
+        background-color: #fff;
+        box-shadow: 0 0 .05rem .05rem #fff;
+    }
+}*/
+
+/*小方块*/
+.container .square{
+    width:100%;
+    height:100%;
+    z-index:10;
+    position: absolute;
+    left:0;
+    top:0;
+    perspective:2000px;
+}
+.container .square ul{
+    float:left;
+    position: relative;
+    width:10%;
+    z-index:10;
+    transform-style: preserve-3d;
+}
+.container .square ul li{
+    width: 100%;
+    background-color: #12117b;
+    box-shadow: 0 0 .3rem 0 rgb(210, 200, 200) inset;
+    box-sizing: border-box;
+    opacity: 0;
+    -webkit-animation:fade linear 1s both;
+    animation:fade linear 1s both;
+}
+@-webkit-keyframes fade {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes fade {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+/*倒计时*/
+@-webkit-keyframes fadeInOut {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity:1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes fadeInOut {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity:1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.content img:nth-child(1){
+    width:2.5rem;
+    height:.72rem;
+    position: absolute;
+    display: block;
+    left:1.3rem;
+    top:2.3rem;
+    animation:fade linear 1.5s .3s both;
+}
+.content img:nth-child(2){
+    width:2.7rem;
+    height:.72rem;
+    position: absolute;
+    display: block;
+    left:3.9rem;
+    top:2.3rem;
+    animation:fade linear 1.5s .7s both;
+}
+.content img:nth-child(3){
+    width:1.4rem;
+    height:.72rem;
+    position: absolute;
+    display: block;
+    left:3rem;
+    top:3.7rem;
+    animation:fade linear 1.5s 1s  both,fadeout .1s 7.3s both;
+}
+.content img:nth-child(4){
+    width:3.5rem;
+    height:.72rem;
+    position: absolute;
+    display: block;
+    left:2rem;
+    bottom:4.3rem;
+    animation:fade linear 1.5s 1.2s  both;
+}
+ .content i{
+    width:1.6rem;
+    height:2.88rem;
+    position: absolute;
+    left:2.65rem;
+    top:5rem;
+    background: url("../img/slide-1-number.png") no-repeat;
+    background-size: 9.6rem 2.88rem;
+    background-position: -4rem 0;
+    animation:scale 1s 6 1.3s both,change 5s steps(5) 1 1.3s both,fade 1.5s 1.3s both;
+}
+@-webkit-keyframes change {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -8rem 0;
+    }
+}
+@keyframes change {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -8rem 0;
+    }
+}
+@-webkit-keyframes scale {
+    0%{
+        transform: scale(0);
+    }
+    75%{
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes scale {
+    0%{
+        transform: scale(0);
+    }
+    75%{
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes opacityzero {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes opacityzero {
+    0%{
+        opacity: 1;
+    }
+  100%{
+      opacity: 0;
+  }
+}
+.container .square .bottom-circle{
+    position: absolute;
+    width:3rem;
+    height:3rem;
+    z-index:13;
+    transform-style: preserve-3d;
+
+}
+.container .square .bottom-circle i{
+    position: absolute;
+    top:8.8rem;
+    left:.6rem;
+    /*border:2px solid #5b146f;*/
+    border-radius: 50%;
+    width:100%;
+    height:100%;
+    box-shadow: 0 0 1rem 1rem #17079f inset,0 0 1rem .3rem rgba(23, 7, 159, 0.76);
+    background-color: #9194b7;
+    transform: rotateX(60deg);
+    z-index:14;transform-origin: center;
+    animation: fade linear 1s 11.3s both;
+}
+.container .square .bottom-circle em{
+    position: absolute;
+    top:8.8rem;
+    left:.6rem;
+    /*border:2px solid #5b146f;*/
+    box-shadow: 0 0 1rem 1.3rem rgba(23, 7, 159, 0.76);
+    border-radius: 50%;
+    width:100%;
+    height:100%;
+    transform: rotateX(60deg);
+    z-index:14;
+    animation: shadowchange 3s infinite 11.3s both,fade linear 1s 11.3s both;
+
+}
+.container .square .bottom-circle b{
+    position: absolute;
+    top:8.8rem;
+    left:.6rem;
+    /*border:2px solid #5b146f;*/
+    box-shadow: 0 0 1rem .5rem rgba(23, 7, 159, 0.76) inset;
+    border-radius: 50%;
+    width:100%;
+    height:100%;
+    transform: rotateX(60deg);
+    z-index:14;
+    animation: shadowchangeinset 3s infinite 11.3s both,fade linear 1s 11.3s both;
+    transform-origin: center;
+}
+@-webkit-keyframes shadowchange {
+    0%{
+        box-shadow: 0 0 2rem 1rem rgba(23, 7, 159, 0.76);
+    }
+    50%{
+        box-shadow: 0 0 2rem 1rem #9294ff;
+    }
+    100%{
+        box-shadow: 0 0 2rem 1rem rgba(23, 7, 159, 0.76);
+    }
+}
+@keyframes shadowchange {
+    0%{
+        box-shadow: 0 0 2rem 1rem rgba(23, 7, 159, 0.76);
+    }
+    50%{
+        box-shadow: 0 0 2rem 1rem #9294ff;
+    }
+    100%{
+        box-shadow: 0 0 2rem 1rem rgba(23, 7, 159, 0.76);
+    }
+}
+@-webkit-keyframes shadowchangeinset {
+    0%{
+        box-shadow: 0 0 1rem .5rem rgba(23, 7, 159, 0.76) inset;
+    }
+    50%{
+        box-shadow: 0 0 1rem .5rem #9294ff inset;
+    }
+    100%{
+        box-shadow: 0 0 1rem .5rem rgba(23, 7, 159, 0.76) inset;
+    }
+}
+@keyframes shadowchangeinset {
+    0%{
+        box-shadow: 0 0 1rem .5rem rgba(23, 7, 159, 0.76) inset;
+    }
+    50%{
+        box-shadow: 0 0 1rem .5rem #9294ff inset;
+    }
+    100%{
+        box-shadow: 0 0 1rem .5rem rgba(23, 7, 159, 0.76) inset;
+    }
+}
+.container .introduct{
+    position: absolute;
+    left:0;
+    top:0;
+    z-index:14;
+}
+.container .introduct>div:nth-child(1){
+    width:0;
+    overflow: hidden;
+    height:1.7rem;
+    background: #d8cccb;
+    position: absolute;
+    left:0;
+    top:1rem;
+    animation: length 2s 11.3s both;
+}
+@-webkit-keyframes length {
+    0%{
+        width:0;
+    }
+    100%{
+        width:7rem;
+    }
+}
+@keyframes length {
+    0%{
+        width:0;
+    }
+    100%{
+        width:7rem;
+    }
+}
+.container .introduct>div>img{
+    width:3rem;
+    height:.72rem;
+    position: relative;
+    left:.9rem;
+    top:.2rem;
+}
+.container .introduct img:nth-child(2){
+    width:3.25rem;
+    height:5rem;
+    position: absolute;
+    left:0.6rem;
+    top:5.6rem;
+    opacity: 0;
+    animation: fade 1s 11.3s both;
+}
+.container .introduct img:nth-child(3){
+    width:2.45rem;
+    height:.46rem;
+    position: absolute;
+    left:3.26rem;
+    z-index: 14;
+    top:3.3rem;
+    opacity: 0;
+    animation: fade 1s 11.3s both;
+}
+/*姓名*/
+.container .introduct img:nth-child(4){
+    width:1.1rem;
+    height:.46rem;
+    position: absolute;
+    left:3.26rem;
+    z-index: 14;
+    top:4.8rem;
+    opacity: 0;
+    animation: fade 1s 11.3s both;
+}
+/*性别*/
+.container .introduct img:nth-child(5){
+    width:1.1rem;
+    height:.46rem;
+    position: absolute;
+    left:3.26rem;
+    z-index: 14;
+    top:6.1rem;
+    opacity: 0;
+    animation: fade 1s 11.9s both;
+}
+/*星座*/
+.container .introduct img:nth-child(6){
+    width:1.1rem;
+    height:.46rem;
+    position: absolute;
+    left:3.26rem;
+    z-index: 14;
+    top:7.5rem;
+    opacity: 0;
+    animation: fade 1s 12.5s both;
+}
+/*门派*/
+.container .introduct img:nth-child(7){
+    width:2rem;
+    height:.46rem;
+    position: absolute;
+    left:3.26rem;
+    z-index: 14;
+    top:9rem;
+    opacity: 0;
+    animation: fade 1s 13.1s both;
+}
+/*等级*/
+.container .introduct img:nth-child(8){
+    width:2rem;
+    height:.46rem;
+    position: absolute;
+    left:3.26rem;
+    z-index: 14;
+    top:10.6rem;
+    opacity: 0;
+    animation: fade 1s 13.7s both;
+}
+/*mengiqna*/
+.container .introduct img:nth-child(9){
+    width:1.1rem;
+    height:.46rem;
+    position: absolute;
+    left:5.42rem;
+    z-index: 14;
+    top:4.8rem;
+    opacity: 0;
+    animation: fade 1s 11.6s both;
+}
+/*nv*/
+.container .introduct img:nth-child(10){
+    width:1rem;
+    height:.46rem;
+    position: absolute;
+    left:5.42rem;
+    z-index: 14;
+    top:6.1rem;
+    opacity: 0;
+    animation: fade 1s 12.2s both;
+}
+.container .introduct img:nth-child(11){
+    width:1.3rem;
+    height:.46rem;
+    position: absolute;
+    left:5.42rem;
+    z-index: 14;
+    top:7.5rem;
+    opacity: 0;
+    animation: fade 1s 12.8s both;
+}
+/*menpai*/
+.container .introduct img:nth-child(12){
+    width:2rem;
+    height:.46rem;
+    position: absolute;
+    left:5.42rem;
+    z-index: 14;
+    top:9rem;
+    opacity: 0;
+    animation: fade 1s 13.4s both;
+}
+/*dengji*/
+.container .introduct img:nth-child(13){
+    width:1rem;
+    height:.46rem;
+    position: absolute;
+    left:5.42rem;
+    z-index: 14;
+    top:10.6rem;
+    opacity: 0;
+    animation: fade 1s 14s both;
+}
+/*slide2*/
+.container .wrapper .slide:nth-child(2){
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    background:url("../img/bj-2.png") no-repeat;
+    background-size: cover;
+    /*opacity:0;*/
+    display: none;
+    z-index:0;
+    transition: all 1s;
+}
+.container .slide2 img:nth-child(1){
+    width:3.6rem;
+    height:.8rem;
+    position: absolute;
+    left:1.2rem;
+    top:1.6rem;
+    animation:slideInLeft 1s both;
+}
+.container .slide2>i{
+    width:.05rem;
+    height:.05rem;
+    display: block;
+    background-color: #fff;
+    box-shadow: 0 0 .3rem .15rem #fff;
+    position: absolute;
+    left:2.5rem;
+    opacity: 0;
+}
+.container .slide2>i.one{
+    top:3.8rem;
+    animation:fade 1s .7s both;
+}
+.container .slide2>i.two{
+    top:5.8rem;
+    animation:fade 1s 2.7s both;
+}
+.container .slide2>i.three{
+    top:7.8rem;
+    animation:fade 1s 4.7s both;
+}
+.container .slide2>i.four{
+    top:9.8rem;
+    animation:fade 1s 6.7s both;
+}
+/*.container .slide2>i:nth-child(5){
+    top:10.1rem;
+}*/
+.container .slide2 span{
+    font-family: 华文隶书;
+    position: absolute;
+    left:1rem;
+    color:#fff;
+    font-size: .4rem;
+    width:1.1rem;
+    top:3.5rem;
+}
+.container .slide2 span.one{
+    animation:bounceInLeft 1s 1.2s both ;
+}
+.container .slide2 span.two{
+    top:5.5rem;
+    animation:bounceInLeft 1s 3.2s both
+}
+.container .slide2 span.three{
+    top:7.5rem;
+    animation:bounceInLeft 1s 5.2s both
+}
+.container .slide2 span.four{
+    top:9.5rem;
+    animation:bounceInLeft 1s 7.2s both
+}
+.container .slide2 p{
+    font-family: 华文隶书;
+    position: absolute;
+    left:3.3rem;
+    color:#fff;
+    font-size: .48rem;
+    width:3.8rem;
+    top:3.6rem;
+}
+.container .slide2 p.one{
+    animation: fade 1s 1.7s both;
+}
+.container .slide2 p.two{
+    top:5.6rem;
+    animation: fade 1s 3.7s both;
+}
+.container .slide2 p.three{
+    top:7.6rem;
+    animation: fade 1s 5.7s both;
+}
+.container .slide2 p.four{
+    top:9.6rem;
+    animation: fade 1s 7.7s both;
+}
+.container .slide2>b{
+    width:.01rem;
+    height:2rem;
+    border-left:2px dashed #fff;
+    display: block;
+    position: absolute;
+    left:2.51rem;
+    top:3.8rem;
+}
+.container .slide2 b.one{
+    animation:bHeight 1s 2.2s both;
+}
+.container .slide2 b.two{
+    top:5.8rem;
+    animation:bHeight 1s 4.2s both;
+}
+.container .slide2 b.three{
+    top:7.8rem;
+    animation:bHeight 1s 6.2s both;
+}
+@-webkit-keyframes slideInLeft {
+    from {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes slideInLeft {
+    from {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@-webkit-keyframes bHeight {
+    0%{
+        height:0;
+    }
+    100%{
+        height:2rem;
+    }
+}
+@keyframes bHeight {
+    0%{
+        height:0;
+    }
+    100%{
+        height:2rem;
+    }
+}
+@-webkit-keyframes bounceInLeft {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-3000px, 0, 0);
+        transform: translate3d(-3000px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(25px, 0, 0);
+        transform: translate3d(25px, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@keyframes bounceInLeft {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-3000px, 0, 0);
+        transform: translate3d(-3000px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(25px, 0, 0);
+        transform: translate3d(25px, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
