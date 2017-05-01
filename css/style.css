@@ -13,7 +13,7 @@ html,body,.container,.wrapper{
     height:100%;
     overflow: hidden;
 }
-.container .slide:nth-child(1){
+.container .slide1{
     width:100%;
     height:100%;
     padding-top:.3rem;
@@ -24,94 +24,6 @@ html,body,.container,.wrapper{
     z-index:1;
     transition: all 1s;
 }
-
-/*加载圆形*/
-/*.container .slide:nth-child(1) .i-circle{
-    position: relative;
-    z-index:3;
-    margin:5rem auto;
-    width:4rem;
-    height:4rem;
-    border-radius: 50%;
-    border:2px solid #fff;
-    animation: borderColorChange linear 10s infinite both;
-}
-.container .slide:nth-child(1) .i-rotate{
-    position: absolute;
-    z-index:3;
-    left:.52rem;
-    top:.52rem;
-    width:.1rem;
-    height:.1rem;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 0 .05rem .05rem #fff;
-    transform-origin:1.48rem 1.48rem;
-    animation: rotate linear 5s infinite both,rotateColorChange linear 10s infinite both;
-}
-@keyframes rotate {
-    0%{
-        transform: rotate(0deg);
-        background-color: #fff;
-        box-shadow: 0 0 .05rem .05rem #fff;
-    }
-    25%{
-        background-color: yellowgreen;
-        box-shadow: 0 0 .05rem .05rem yellowgreen;
-    }
-    50%{
-        background-color: greenyellow;
-        box-shadow: 0 0 .05rem .05rem greenyellow;
-    }
-    75%{
-        background-color: yellowgreen;
-        box-shadow: 0 0 .05rem .05rem yellowgreen;
-    }
-    100%{
-        transform: rotate(360deg);
-        background-color: #fff;
-        box-shadow: 0 0 .05rem .05rem #fff;
-    }
-}
-@keyframes borderColorChange {
-    0%{
-        border-color: #fff;
-    }
-    25%{
-        border-color: yellowgreen;
-    }
-    50%{
-        border-color: greenyellow;
-    }
-    75%{
-        border-color: yellowgreen;
-    }
-    100%{
-        border-color: #fff;
-    }
-}
-@keyframes rotateColorChange {
-    0%{
-        background-color: #fff;
-        box-shadow: 0 0 .05rem .05rem #fff;
-    }
-    25%{
-        background-color: yellowgreen;
-        box-shadow: 0 0 .05rem .05rem yellowgreen;
-    }
-    50%{
-        background-color: greenyellow;
-        box-shadow: 0 0 .05rem .05rem greenyellow;
-    }
-    75%{
-        background-color: yellowgreen;
-        box-shadow: 0 0 .05rem .05rem yellowgreen;
-    }
-    100%{
-        background-color: #fff;
-        box-shadow: 0 0 .05rem .05rem #fff;
-    }
-}*/
 
 /*小方块*/
 .container .square{
@@ -189,6 +101,7 @@ html,body,.container,.wrapper{
     display: block;
     left:1.3rem;
     top:2.3rem;
+    -webkit-animation:fade linear 1.5s .3s both;
     animation:fade linear 1.5s .3s both;
 }
 .content img:nth-child(2){
@@ -198,6 +111,7 @@ html,body,.container,.wrapper{
     display: block;
     left:3.9rem;
     top:2.3rem;
+    -webkit-animation:fade linear 1.5s .7s both;
     animation:fade linear 1.5s .7s both;
 }
 .content img:nth-child(3){
@@ -207,6 +121,7 @@ html,body,.container,.wrapper{
     display: block;
     left:3rem;
     top:3.7rem;
+    -webkit-animation:fade linear 1.5s 1s  both,fadeout .1s 7.3s both;
     animation:fade linear 1.5s 1s  both,fadeout .1s 7.3s both;
 }
 .content img:nth-child(4){
@@ -216,6 +131,7 @@ html,body,.container,.wrapper{
     display: block;
     left:2rem;
     bottom:4.3rem;
+    -webkit-animation:fade linear 1.5s 1.2s  both;
     animation:fade linear 1.5s 1.2s  both;
 }
  .content i{
@@ -227,6 +143,7 @@ html,body,.container,.wrapper{
     background: url("../img/slide-1-number.png") no-repeat;
     background-size: 9.6rem 2.88rem;
     background-position: -4rem 0;
+     -webkit-animation:scale 1s 6 1.3s both,change 5s steps(5) 1 1.3s both,fade 1.5s 1.3s both;
     animation:scale 1s 6 1.3s both,change 5s steps(5) 1 1.3s both,fade 1.5s 1.3s both;
 }
 @-webkit-keyframes change {
@@ -303,6 +220,7 @@ html,body,.container,.wrapper{
     background-color: #9194b7;
     transform: rotateX(60deg);
     z-index:14;transform-origin: center;
+    -webkit-animation: fade linear 1s 11.3s both;
     animation: fade linear 1s 11.3s both;
 }
 .container .square .bottom-circle em{
@@ -316,6 +234,7 @@ html,body,.container,.wrapper{
     height:100%;
     transform: rotateX(60deg);
     z-index:14;
+    -webkit-animation: shadowchange 3s infinite 11.3s both,fade linear 1s 11.3s both;
     animation: shadowchange 3s infinite 11.3s both,fade linear 1s 11.3s both;
 
 }
@@ -330,6 +249,7 @@ html,body,.container,.wrapper{
     height:100%;
     transform: rotateX(60deg);
     z-index:14;
+    -webkit-animation: shadowchangeinset 3s infinite 11.3s both,fade linear 1s 11.3s both;
     animation: shadowchangeinset 3s infinite 11.3s both,fade linear 1s 11.3s both;
     transform-origin: center;
 }
@@ -391,6 +311,7 @@ html,body,.container,.wrapper{
     position: absolute;
     left:0;
     top:1rem;
+    -webkit-animation: length 2s 11.3s both;
     animation: length 2s 11.3s both;
 }
 @-webkit-keyframes length {
@@ -423,6 +344,7 @@ html,body,.container,.wrapper{
     left:0.6rem;
     top:5.6rem;
     opacity: 0;
+    -webkit-animation: fade 1s 11.3s both;
     animation: fade 1s 11.3s both;
 }
 .container .introduct img:nth-child(3){
@@ -433,6 +355,7 @@ html,body,.container,.wrapper{
     z-index: 14;
     top:3.3rem;
     opacity: 0;
+    -webkit-animation: fade 1s 11.3s both;
     animation: fade 1s 11.3s both;
 }
 /*姓名*/
@@ -444,6 +367,7 @@ html,body,.container,.wrapper{
     z-index: 14;
     top:4.8rem;
     opacity: 0;
+    -webkit-animation: fade 1s 11.3s both;
     animation: fade 1s 11.3s both;
 }
 /*性别*/
@@ -455,6 +379,7 @@ html,body,.container,.wrapper{
     z-index: 14;
     top:6.1rem;
     opacity: 0;
+    -webkit-animation: fade 1s 11.9s both;
     animation: fade 1s 11.9s both;
 }
 /*星座*/
@@ -466,6 +391,7 @@ html,body,.container,.wrapper{
     z-index: 14;
     top:7.5rem;
     opacity: 0;
+    -webkit-animation: fade 1s 12.5s both;
     animation: fade 1s 12.5s both;
 }
 /*门派*/
@@ -477,6 +403,7 @@ html,body,.container,.wrapper{
     z-index: 14;
     top:9rem;
     opacity: 0;
+    -webkit-animation: fade 1s 13.1s both;
     animation: fade 1s 13.1s both;
 }
 /*等级*/
@@ -488,6 +415,7 @@ html,body,.container,.wrapper{
     z-index: 14;
     top:10.6rem;
     opacity: 0;
+    -webkit-animation: fade 1s 13.7s both;
     animation: fade 1s 13.7s both;
 }
 /*mengiqna*/
@@ -499,6 +427,7 @@ html,body,.container,.wrapper{
     z-index: 14;
     top:4.8rem;
     opacity: 0;
+    -webkit-animation: fade 1s 11.6s both;
     animation: fade 1s 11.6s both;
 }
 /*nv*/
@@ -510,6 +439,7 @@ html,body,.container,.wrapper{
     z-index: 14;
     top:6.1rem;
     opacity: 0;
+    -webkit-animation: fade 1s 12.2s both;
     animation: fade 1s 12.2s both;
 }
 .container .introduct img:nth-child(11){
@@ -520,6 +450,7 @@ html,body,.container,.wrapper{
     z-index: 14;
     top:7.5rem;
     opacity: 0;
+    -webkit-animation: fade 1s 12.8s both;
     animation: fade 1s 12.8s both;
 }
 /*menpai*/
@@ -531,6 +462,7 @@ html,body,.container,.wrapper{
     z-index: 14;
     top:9rem;
     opacity: 0;
+    -webkit-animation: fade 1s 13.4s both;
     animation: fade 1s 13.4s both;
 }
 /*dengji*/
@@ -542,10 +474,11 @@ html,body,.container,.wrapper{
     z-index: 14;
     top:10.6rem;
     opacity: 0;
+    -webkit-animation: fade 1s 14s both;
     animation: fade 1s 14s both;
 }
 /*slide2*/
-.container .wrapper .slide:nth-child(2){
+.container .wrapper .slide2{
     width:100%;
     height:100%;
     position:absolute;
@@ -564,6 +497,7 @@ html,body,.container,.wrapper{
     position: absolute;
     left:1.2rem;
     top:1.6rem;
+    -webkit-animation:slideInLeft 1s both;
     animation:slideInLeft 1s both;
 }
 .container .slide2>i{
@@ -578,18 +512,22 @@ html,body,.container,.wrapper{
 }
 .container .slide2>i.one{
     top:3.8rem;
+    -webkit-animation:fade 1s .7s both;
     animation:fade 1s .7s both;
 }
 .container .slide2>i.two{
     top:5.8rem;
+    -webkit-animation:fade 1s 2.7s both;
     animation:fade 1s 2.7s both;
 }
 .container .slide2>i.three{
     top:7.8rem;
+    -webkit-animation:fade 1s 4.7s both;
     animation:fade 1s 4.7s both;
 }
 .container .slide2>i.four{
     top:9.8rem;
+    -webkit-animation:fade 1s 6.7s both;
     animation:fade 1s 6.7s both;
 }
 /*.container .slide2>i:nth-child(5){
@@ -605,19 +543,23 @@ html,body,.container,.wrapper{
     top:3.5rem;
 }
 .container .slide2 span.one{
+    -webkit-animation:bounceInLeft 1s 1.2s both ;
     animation:bounceInLeft 1s 1.2s both ;
 }
 .container .slide2 span.two{
     top:5.5rem;
-    animation:bounceInLeft 1s 3.2s both
+    -webkit-animation:bounceInLeft 1s 3.2s both;
+    animation:bounceInLeft 1s 3.2s both;
 }
 .container .slide2 span.three{
     top:7.5rem;
-    animation:bounceInLeft 1s 5.2s both
+    -webkit-animation:bounceInLeft 1s 5.2s both;
+    animation:bounceInLeft 1s 5.2s both;
 }
 .container .slide2 span.four{
     top:9.5rem;
-    animation:bounceInLeft 1s 7.2s both
+    -webkit-animation:bounceInLeft 1s 7.2s both;
+    animation:bounceInLeft 1s 7.2s both;
 }
 .container .slide2 p{
     font-family: 华文隶书;
@@ -629,18 +571,22 @@ html,body,.container,.wrapper{
     top:3.6rem;
 }
 .container .slide2 p.one{
+    -webkit-animation: fade 1s 1.7s both;
     animation: fade 1s 1.7s both;
 }
 .container .slide2 p.two{
     top:5.6rem;
+    -webkit-animation: fade 1s 3.7s both;
     animation: fade 1s 3.7s both;
 }
 .container .slide2 p.three{
     top:7.6rem;
+    -webkit-animation: fade 1s 5.7s both;
     animation: fade 1s 5.7s both;
 }
 .container .slide2 p.four{
     top:9.6rem;
+    -webkit-animation: fade 1s 7.7s both;
     animation: fade 1s 7.7s both;
 }
 .container .slide2>b{
@@ -653,14 +599,17 @@ html,body,.container,.wrapper{
     top:3.8rem;
 }
 .container .slide2 b.one{
+    -webkit-animation:bHeight 1s 2.2s both;
     animation:bHeight 1s 2.2s both;
 }
 .container .slide2 b.two{
     top:5.8rem;
+    -webkit-animation:bHeight 1s 4.2s both;
     animation:bHeight 1s 4.2s both;
 }
 .container .slide2 b.three{
     top:7.8rem;
+    -webkit-animation:bHeight 1s 6.2s both;
     animation:bHeight 1s 6.2s both;
 }
 @-webkit-keyframes slideInLeft {
@@ -767,5 +716,279 @@ html,body,.container,.wrapper{
     to {
         -webkit-transform: none;
         transform: none;
+    }
+}
+.container .slide3{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background: url("../img/bg3-1.jpg");
+    background-size: cover;
+}
+.container .slide3>p,.container .slide4>p{
+    font-family:华文隶书;
+    font-size:.72rem;
+    font-weight:900;
+    position: absolute;
+    left:1.3rem;
+    top:1.8rem;
+    color:#fff;
+    -webkit-animation: slideInLeft 1s both;
+    animation: slideInLeft 1s both;
+}
+.container .slide3 .desc{
+    position: absolute;
+    top:3.2rem;
+    perspective:2000px;
+    transform-style: preserve-3d;
+}
+.container .slide3 .desc i{
+    width:1.3rem;
+    height:1.3rem;
+    padding:.2rem;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    position: absolute;
+    box-shadow: 0 0 1.5rem #fff;
+}
+.container .slide3 .desc .css-circle{
+    background: url("../img/css.png") no-repeat center #100969;
+    background-size: cover;
+    transform: translateZ(-10rem);
+    left:1.5rem;
+    -webkit-animation: scaleChange linear 1.8s infinite both,fade 1s .4s both;
+    animation: scaleChange linear 1.8s infinite both,fade 1s .4s both;
+}
+.container .slide3 .desc .html-circle{
+    background: url("../img/html.png") no-repeat center #100969;
+    background-size: cover;
+    transform: translateZ(10rem);
+    left:3.6rem;
+    top:1.2rem;
+    -webkit-animation: scaleChange2 linear 2s infinite both,fade 1s .8s both;
+    animation: scaleChange2 linear 2s infinite both,fade 1s .8s both;
+}
+.container .slide3 .desc .js-circle{
+    background: url("../img/js.png") no-repeat center #100969;
+    background-size: cover;
+    transform: translateZ(5rem);
+    left:1.5rem;
+    top:2.3rem;
+    -webkit-animation: scaleChange linear 2s infinite both,fade 1s 2.4s both;
+    animation: scaleChange linear 2s infinite both,fade 1s 2.4s both;
+}
+.container .slide3 .desc .vue-circle{
+    background: url("../img/vue.png") no-repeat center #100969;
+    background-size: cover;
+    transform: translateZ(-5rem);
+    left:4.5rem;
+    top:4.5rem;
+    -webkit-animation: scaleChange2 linear 2s infinite both,fade 1s 1.2s both;
+    animation: scaleChange2 linear 2s infinite both,fade 1s 1.2s both;
+}
+.container .slide3 .desc .npm-circle{
+    background: url("../img/npm.png") no-repeat center #100969;
+    background-size: cover;
+    transform: translateZ(1rem);
+    left:.5rem;
+    top:5.5rem;
+    -webkit-animation: scaleChange linear 2.5s infinite both,fade 1s 1.6s both;
+    animation: scaleChange linear 2.5s infinite both,fade 1s 1.6s both;
+}
+.container .slide3 .desc .node-circle{
+    background: url("../img/node.png") no-repeat center #100969;
+    background-size: cover;
+    transform: translateZ(7rem);
+    left:4.5rem;
+    top:5.5rem;
+    -webkit-animation: scaleChange linear 2s infinite both,fade 1s 2s both;
+    animation: scaleChange linear 2s infinite both,fade 1s 2s both;
+}
+@-webkit-keyframes scaleChange {
+    0%{
+        width:1.3rem;
+        height:1.3rem;
+    }
+    50%{
+        width:1.1rem;
+        height:1.1rem;
+    }
+    100%{
+        width:1.3rem;
+        height:1.3rem;
+    }
+}
+@keyframes scaleChange {
+    0%{
+        width:1.3rem;
+        height:1.3rem;
+    }
+    50%{
+        width:1.1rem;
+        height:1.1rem;
+    }
+    100%{
+        width:1.3rem;
+        height:1.3rem;
+    }
+}
+@-webkit-keyframes scaleChange2 {
+    0%{
+        width:1.1rem;
+        height:1.1rem;
+    }
+    50%{
+        width:1.3rem;
+        height:1.3rem;
+    }
+    100%{
+        width:1.1rem;
+        height:1.1rem;
+    }
+}
+@keyframes scaleChange2 {
+    0%{
+        width:1.1rem;
+        height:1.1rem;
+    }
+    50%{
+        width:1.3rem;
+        height:1.3rem;
+    }
+    100%{
+        width:1.1rem;
+        height:1.1rem;
+    }
+}
+.container .slide4{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background: url("../img/bg3-2.jpg");
+    background-size: cover;
+}
+.container .slide4 div{
+    position: absolute;
+    top:4rem;
+    width:4.6rem;
+    left:1.3rem;
+    animation: fade 2s .3s both;
+    -webkit-animation: fade 2s .3s both;
+}
+.container .slide4 div>p{
+    font-size: .48rem;
+    color:#fff;
+    line-height:.72rem;
+    font-family: 楷体;
+}
+.container .slide5{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background: url("../img/bg-5.jpg");
+    background-size: cover;
+}
+.container .slide5 p{
+    width:100%;
+    text-align: center;
+    font-family: 华文行楷;
+    color:#fff;
+}
+.container .slide5 p:nth-child(1){
+    margin-top:2rem;
+    font-size: .72rem;
+    -webkit-animation: rotateIn 1s 1 both;
+    animation: rotateIn 1s 1 both;
+}
+.container .slide5 p:nth-child(2){
+    margin-top:.5rem;
+    font-size: .6rem;
+    -webkit-animation: rollInTop 1s 1s both;
+    animation: rollInTop 1s 1s both;
+}
+.container .slide5 img{
+    width:3rem;
+    height:3rem;
+    display: block;
+    margin:2rem auto;
+    -webkit-animation: fade 1s 1.7s both;
+    animation: fade 1s 1.7s both;
+}
+@-webkit-keyframes rotateIn {
+    0%{
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotateIn {
+    0%{
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rollInTop {
+    0%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes rollInTop {
+    0%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+#pointer{
+    position: absolute;
+    bottom:.8rem;
+    left:50%;
+    margin-left:-.5rem;
+    width:1rem;
+    height:1rem;
+    z-index:2;
+    background: url("../img/pointer.png")no-repeat;
+    background-size: cover;
+    -webkit-animation: pointerMove 1s infinite both;
+    animation: pointerMove 1s infinite both;
+}
+@-webkit-keyframes pointerMove {
+    0%{
+        transform: translateY(-.2rem);
+    }
+    70%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-.2rem);
+    }
+}
+@keyframes pointerMove {
+    0%{
+        transform: translateY(-.2rem);
+    }
+    70%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-.2rem);
     }
 }
