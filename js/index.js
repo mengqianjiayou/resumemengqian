@@ -3,7 +3,7 @@ var container = document.getElementsByClassName('container')[0],
     square = wrapper.getElementsByClassName('square')[0],
     oUl = square.getElementsByTagName('ul'),
     winHeight = document.documentElement.clientHeight;
-function creatLi() {
+/*function creatLi() {
     var winw = document.documentElement.clientWidth;
     for (var i = 0; i < oUl.length; i++) {
         var curUl = oUl[i],
@@ -17,8 +17,8 @@ function creatLi() {
         }
     }
 }
-creatLi();
-function fadeIn() {
+creatLi();*/
+/*function fadeIn() {
     var olis = square.getElementsByTagName('li');
     for(var i= 0;i<olis.length;i++){
         var random = (Math.random()*4+7.3)+'s';
@@ -29,7 +29,7 @@ function fadeIn() {
         olis[i].style.animationDelay = random;
     }
 }
-fadeIn();
+fadeIn();*/
 var slides = container.getElementsByClassName('slide');
 var slidesAry = [].slice.call(slides,0);
 var index = 0;
@@ -90,3 +90,4 @@ pointer.onclick = function () {
     }
     setSlide();
 }
+
