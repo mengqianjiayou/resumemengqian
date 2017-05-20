@@ -20,13 +20,12 @@ html,body,.container,.wrapper{
     background:url("../img/bg1-1.jpg") no-repeat;
     background-size: cover;
     position: relative;
-    /*opacity:0;*/
     z-index:1;
     transition: all 1s;
 }
 
 /*小方块*/
-.container .square{
+/*.container .square{
     width:100%;
     height:100%;
     z-index:10;
@@ -50,7 +49,7 @@ html,body,.container,.wrapper{
     opacity: 0;
     -webkit-animation:fade linear 1s both;
     animation:fade linear 1s both;
-}
+}*/
 @-webkit-keyframes fade {
     0%{
         opacity:0;
@@ -68,32 +67,6 @@ html,body,.container,.wrapper{
     }
 }
 
-/*倒计时*/
-@-webkit-keyframes fadeInOut {
-    0%{
-        opacity: 0;
-    }
-    20%{
-        opacity:1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-@keyframes fadeInOut {
-    0%{
-        opacity: 0;
-    }
-    20%{
-        opacity:1;
-    }
-    80%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
 .content img:nth-child(1){
     width:2.5rem;
     height:.72rem;
@@ -302,6 +275,26 @@ html,body,.container,.wrapper{
     left:0;
     top:0;
     z-index:14;
+    width:100%;
+    height:100%;
+    -webkit-animation: changeback 1s 7s 1 both;
+    animation: changeback 1s 8s 1 both;
+}
+@-webkit-keyframes changeback {
+    0%{
+        background-color: transparent;
+    }
+    100%{
+        background-color: #4b4647;
+    }
+}
+@keyframes changeback {
+    0%{
+        background-color: transparent;
+    }
+    100%{
+        background-color: #4b4647;
+    }
 }
 .container .introduct>div:nth-child(1){
     width:0;
