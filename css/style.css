@@ -944,3 +944,36 @@ html,body,.container,.wrapper{
         transform: translateY(-.2rem);
     }
 }
+/*音乐*/
+.music{
+    width:1rem;
+    height:1rem;
+    box-shadow: 0 0 .2rem #fff;
+    border-radius: 50%;
+    background: url("../img/music-icon.png") no-repeat center;
+    background-size: 70%;
+    position: absolute;
+    right:.7rem;
+    top:.7rem;
+    z-index: 20;
+}
+.musicMove{
+    -webkit-animation: rotate linear 3s infinite;
+    animation: rotate linear 3s infinite ;
+}
+@-webkit-keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

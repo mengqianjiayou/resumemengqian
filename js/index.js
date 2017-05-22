@@ -28,34 +28,61 @@ function autoMove() {
     setSlide();
 }
 var oBody = document.getElementById('body');
-
+var musicBox = document.querySelector('#musicBox');
+var musicAudio = document.querySelector('#musicAudio');
+window.setTimeout(function () {
+    musicAudio.play();
+    musicAudio.addEventListener('canplay',function () {
+        //能播放就执行函数
+        can = true;
+        musicBox.className = 'music musicMove';
+    });
+},1000);
 oBody.timer = window.setInterval(autoMove,18000);
 oBody.addEventListener('touchstart',function(e){
-     e = e||event;
+     e = e||window.event;
     window.clearInterval(oBody.timer);
-    oBody.startY = e.touches[0].pageY;
-    console.log(oBody.startY);
+    if(e.target.className.toUpperCase().indexOf('MUSIC') != -1){
+        if(!musicAudio.paused){
+            musicAudio.pause();
+            musicAudio.addEventListener('pause',function () {
+                //能播放就执行函数
+                musicBox.className = ' music';
+            });
+        }else{
+            musicAudio.play();
+            musicAudio.addEventListener('play',function () {
+                //能播放就执行函数
+                musicBox.className = 'music musicMove';
+            });
+        }
+    }else{
+        oBody.startY = e.touches[0].pageY;
+    }
 });
 oBody.addEventListener('touchmove',function(e){
-     e  = e||event;
+     e  = e||window.event;
+
     var endY = e.touches[0].pageY;
     oBody.changeY = endY-oBody.startY;
 });
 oBody.addEventListener('touchend',function(e){
-    e  = e||event;
-    if(oBody.changeY<0){
-        index++;
-        if(index === slidesAry.length){
-            index = 0;
+    e  = e||window.event;
+    if(e.target.className.toUpperCase().indexOf('MUSIC') == -1){
+        if(oBody.changeY<0){
+            index++;
+            if(index === slidesAry.length){
+                index = 0;
+            }
+        }else{
+            index--;
+            if(index === -1){
+                index = slidesAry.length-1;
+            }
         }
-    }else{
-        index--;
-        if(index === -1){
-            index = slidesAry.length-1;
-        }
+        setSlide();
+        oBody.timer = window.setInterval(autoMove,18000);
     }
-    setSlide();
-    oBody.timer = window.setInterval(autoMove,18000);
 });
 
 var pointer =document.getElementById('pointer');
@@ -66,4 +93,5 @@ pointer.onclick = function () {
     }
     setSlide();
 };
+
 
