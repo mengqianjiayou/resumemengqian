@@ -23,33 +23,6 @@ html,body,.container,.wrapper{
     z-index:1;
     transition: all 1s;
 }
-
-/*小方块*/
-/*.container .square{
-    width:100%;
-    height:100%;
-    z-index:10;
-    position: absolute;
-    left:0;
-    top:0;
-    perspective:2000px;
-}
-.container .square ul{
-    float:left;
-    position: relative;
-    width:10%;
-    z-index:10;
-    transform-style: preserve-3d;
-}
-.container .square ul li{
-    width: 100%;
-    background-color: #12117b;
-    box-shadow: 0 0 .3rem 0 rgb(210, 200, 200) inset;
-    box-sizing: border-box;
-    opacity: 0;
-    -webkit-animation:fade linear 1s both;
-    animation:fade linear 1s both;
-}*/
 @-webkit-keyframes fade {
     0%{
         opacity:0;
@@ -66,10 +39,15 @@ html,body,.container,.wrapper{
         opacity:1;
     }
 }
-
-.content img:nth-child(1){
+.content{
+    color:#fff;
+    position: relative;
+}
+.content span:nth-child(1){
     width:2.5rem;
     height:.72rem;
+    font-family:华文隶书;
+    font-size: .72rem;
     position: absolute;
     display: block;
     left:1.3rem;
@@ -77,9 +55,11 @@ html,body,.container,.wrapper{
     -webkit-animation:fade linear 1.5s .3s both;
     animation:fade linear 1.5s .3s both;
 }
-.content img:nth-child(2){
+.content span:nth-child(2){
     width:2.7rem;
     height:.72rem;
+    font-family:华文隶书;
+    font-size: .72rem;
     position: absolute;
     display: block;
     left:3.9rem;
@@ -87,23 +67,27 @@ html,body,.container,.wrapper{
     -webkit-animation:fade linear 1.5s .7s both;
     animation:fade linear 1.5s .7s both;
 }
-.content img:nth-child(3){
-    width:1.4rem;
+.content span:nth-child(3){
+    width:1.5rem;
     height:.72rem;
     position: absolute;
     display: block;
+    font-family:华文隶书;
+    font-size: .72rem;
     left:3rem;
     top:3.7rem;
     -webkit-animation:fade linear 1.5s 1s  both,fadeout .1s 7.3s both;
     animation:fade linear 1.5s 1s  both,fadeout .1s 7.3s both;
 }
-.content img:nth-child(4){
+.content span:nth-child(4){
     width:3.5rem;
     height:.72rem;
     position: absolute;
     display: block;
+    font-family:华文隶书;
+    font-size: .72rem;
     left:2rem;
-    bottom:4.3rem;
+    top:8.3rem;
     -webkit-animation:fade linear 1.5s 1.2s  both;
     animation:fade linear 1.5s 1.2s  both;
 }
@@ -173,6 +157,14 @@ html,body,.container,.wrapper{
       opacity: 0;
   }
 }
+.container .square{
+    position: absolute;
+    top:8.8rem;
+    left:.6rem;
+    z-index:13;
+    width:3rem;
+    height:3rem;
+}
 .container .square .bottom-circle{
     position: absolute;
     width:3rem;
@@ -183,9 +175,8 @@ html,body,.container,.wrapper{
 }
 .container .square .bottom-circle i{
     position: absolute;
-    top:8.8rem;
-    left:.6rem;
-    /*border:2px solid #5b146f;*/
+    top:0;
+    left:0;
     border-radius: 50%;
     width:100%;
     height:100%;
@@ -193,28 +184,27 @@ html,body,.container,.wrapper{
     background-color: #9194b7;
     transform: rotateX(60deg);
     z-index:14;transform-origin: center;
-    -webkit-animation: fade linear 1s 11.3s both;
-    animation: fade linear 1s 11.3s both;
+    -webkit-animation: fade linear 1s 6.3s both;
+    animation: fade linear 1s 6.3s both;
 }
 .container .square .bottom-circle em{
     position: absolute;
-    top:8.8rem;
-    left:.6rem;
-    /*border:2px solid #5b146f;*/
+    top:0;
+    left:0;
     box-shadow: 0 0 1rem 1.3rem rgba(23, 7, 159, 0.76);
     border-radius: 50%;
     width:100%;
     height:100%;
     transform: rotateX(60deg);
     z-index:14;
-    -webkit-animation: shadowchange 3s infinite 11.3s both,fade linear 1s 11.3s both;
-    animation: shadowchange 3s infinite 11.3s both,fade linear 1s 11.3s both;
+    -webkit-animation: shadowchange 3s infinite 6.3s both,fade linear 1s 6.3s both;
+    animation: shadowchange 3s infinite 6.3s both,fade linear 1s 6.3s both;
 
 }
 .container .square .bottom-circle b{
     position: absolute;
-    top:8.8rem;
-    left:.6rem;
+    top:0;
+    left:0;
     /*border:2px solid #5b146f;*/
     box-shadow: 0 0 1rem .5rem rgba(23, 7, 159, 0.76) inset;
     border-radius: 50%;
@@ -222,8 +212,8 @@ html,body,.container,.wrapper{
     height:100%;
     transform: rotateX(60deg);
     z-index:14;
-    -webkit-animation: shadowchangeinset 3s infinite 11.3s both,fade linear 1s 11.3s both;
-    animation: shadowchangeinset 3s infinite 11.3s both,fade linear 1s 11.3s both;
+    -webkit-animation: shadowchangeinset 3s infinite 6.3s both,fade linear 1s 6.3s both;
+    animation: shadowchangeinset 3s infinite 6.3s both,fade linear 1s 6.3s both;
     transform-origin: center;
 }
 @-webkit-keyframes shadowchange {
@@ -277,35 +267,34 @@ html,body,.container,.wrapper{
     z-index:14;
     width:100%;
     height:100%;
-    -webkit-animation: changeback 1s 7s 1 both;
-    animation: changeback 1s 8s 1 both;
+    opacity: 0;
+    -webkit-animation: fade 1.5s 6.3s both;
+    animation: fade 1.5s 6.3s both;
 }
-@-webkit-keyframes changeback {
-    0%{
-        background-color: transparent;
-    }
-    100%{
-        background-color: #4b4647;
-    }
+.container .introduct .bg{
+    position: absolute;
+    z-index:1;
+    width:100%;
+    height:100%;
+    background: url("../img/bg1-2.jpg") no-repeat;
+    background-size: cover;
+    -webkit-animation: fade 1s 6.3s 1 both;
+    animation: fade 1s 6.3s 1 both;
 }
-@keyframes changeback {
-    0%{
-        background-color: transparent;
-    }
-    100%{
-        background-color: #4b4647;
-    }
-}
-.container .introduct>div:nth-child(1){
-    width:0;
+.container .introduct>p{
     overflow: hidden;
     height:1.7rem;
-    background: #d8cccb;
+    font-size: 1rem;
+    color:#fff;
+    line-height:1.7rem;
+    padding-left:1rem;
+    font-family: 华文行楷;
     position: absolute;
+    z-index: 2;
     left:0;
     top:1rem;
-    -webkit-animation: length 2s 11.3s both;
-    animation: length 2s 11.3s both;
+    -webkit-animation: fade 2s 7s both;
+    animation: fade 2s 7s both;
 }
 @-webkit-keyframes length {
     0%{
@@ -323,152 +312,124 @@ html,body,.container,.wrapper{
         width:7rem;
     }
 }
-.container .introduct>div>img{
-    width:3rem;
-    height:.72rem;
-    position: relative;
-    left:.9rem;
-    top:.2rem;
-}
-.container .introduct img:nth-child(2){
+.container .introduct .model{
+    z-index:14;
     width:3.25rem;
     height:5rem;
     position: absolute;
     left:0.6rem;
     top:5.6rem;
     opacity: 0;
-    -webkit-animation: fade 1s 11.3s both;
-    animation: fade 1s 11.3s both;
+    -webkit-animation: fade 1s 7.3s both;
+    animation: fade 1s 7.3s both;
 }
-.container .introduct img:nth-child(3){
-    width:2.45rem;
-    height:.46rem;
+
+.container .self-info{
+    width:4.1rem;
+    height:9rem;
+    font-family: 华文隶书;
+    font-size: .46rem;
+    color: #fff7f4;
     position: absolute;
-    left:3.26rem;
-    z-index: 14;
-    top:3.3rem;
-    opacity: 0;
-    -webkit-animation: fade 1s 11.3s both;
-    animation: fade 1s 11.3s both;
+    right:0;
+    top:3.8rem;
+    z-index:14;
 }
-/*姓名*/
-.container .introduct img:nth-child(4){
-    width:1.1rem;
-    height:.46rem;
+.container .self-info span:nth-child(1){
     position: absolute;
-    left:3.26rem;
-    z-index: 14;
-    top:4.8rem;
+    left:0;
+    top:0;
     opacity: 0;
-    -webkit-animation: fade 1s 11.3s both;
-    animation: fade 1s 11.3s both;
+    -webkit-animation: fade 1s 7.3s both;
+    animation: fade 1s 7.3s both;
 }
-/*性别*/
-.container .introduct img:nth-child(5){
-    width:1.1rem;
-    height:.46rem;
+.container .self-info span:nth-child(3){
     position: absolute;
-    left:3.26rem;
-    z-index: 14;
-    top:6.1rem;
+    left:0;
+    top:1.3rem;
     opacity: 0;
-    -webkit-animation: fade 1s 11.9s both;
-    animation: fade 1s 11.9s both;
+    -webkit-animation: fade 1s 7.3s both;
+    animation: fade 1s 7.3s both;
 }
-/*星座*/
-.container .introduct img:nth-child(6){
-    width:1.1rem;
-    height:.46rem;
+.container .self-info span:nth-child(5){
     position: absolute;
-    left:3.26rem;
-    z-index: 14;
-    top:7.5rem;
+    left:0;
+    top:2.6rem;
     opacity: 0;
-    -webkit-animation: fade 1s 12.5s both;
-    animation: fade 1s 12.5s both;
+    -webkit-animation: fade 1s 7.3s both;
+    animation: fade 1s 7.3s both;
 }
-/*门派*/
-.container .introduct img:nth-child(7){
-    width:2rem;
-    height:.46rem;
+.container .self-info span:nth-child(7){
     position: absolute;
-    left:3.26rem;
-    z-index: 14;
-    top:9rem;
+    left:0;
+    top:3.9rem;
     opacity: 0;
-    -webkit-animation: fade 1s 13.1s both;
-    animation: fade 1s 13.1s both;
+    -webkit-animation: fade 1s 7.3s both;
+    animation: fade 1s 7.3s both;
 }
-/*等级*/
-.container .introduct img:nth-child(8){
-    width:2rem;
-    height:.46rem;
+.container .self-info span:nth-child(9){
     position: absolute;
-    left:3.26rem;
-    z-index: 14;
-    top:10.6rem;
+    left:0;
+    top:5.2rem;
     opacity: 0;
-    -webkit-animation: fade 1s 13.7s both;
-    animation: fade 1s 13.7s both;
+    -webkit-animation: fade 1s 7.3s both;
+    animation: fade 1s 7.3s both;
 }
-/*mengiqna*/
-.container .introduct img:nth-child(9){
-    width:1.1rem;
-    height:.46rem;
+.container .self-info span:nth-child(11){
     position: absolute;
-    left:5.42rem;
-    z-index: 14;
-    top:4.8rem;
+    left:0;
+    top:6.5rem;
     opacity: 0;
-    -webkit-animation: fade 1s 11.6s both;
-    animation: fade 1s 11.6s both;
+    -webkit-animation: fade 1s 7.3s both;
+    animation: fade 1s 7.3s both;
 }
-/*nv*/
-.container .introduct img:nth-child(10){
-    width:1rem;
-    height:.46rem;
+.container .self-info i:nth-child(2){
     position: absolute;
-    left:5.42rem;
-    z-index: 14;
-    top:6.1rem;
+    left:1.4rem;
+    top:0;
     opacity: 0;
-    -webkit-animation: fade 1s 12.2s both;
-    animation: fade 1s 12.2s both;
+    -webkit-animation: fade 1s 7.9s both;
+    animation: fade 1s 7.9s both;
 }
-.container .introduct img:nth-child(11){
-    width:1.3rem;
-    height:.46rem;
+.container .self-info i:nth-child(4){
     position: absolute;
-    left:5.42rem;
-    z-index: 14;
-    top:7.5rem;
+    left:1.4rem;
+    top:1.3rem;
     opacity: 0;
-    -webkit-animation: fade 1s 12.8s both;
-    animation: fade 1s 12.8s both;
+    -webkit-animation: fade 1s 8.5s both;
+    animation: fade 1s 8.5s both;
 }
-/*menpai*/
-.container .introduct img:nth-child(12){
-    width:2rem;
-    height:.46rem;
+.container .self-info i:nth-child(6){
     position: absolute;
-    left:5.42rem;
-    z-index: 14;
-    top:9rem;
+    left:1.4rem;
+    top:2.6rem;
     opacity: 0;
-    -webkit-animation: fade 1s 13.4s both;
-    animation: fade 1s 13.4s both;
+    -webkit-animation: fade 1s 9.1s both;
+    animation: fade 1s 9.1s both;
 }
-/*dengji*/
-.container .introduct img:nth-child(13){
-    width:1rem;
-    height:.46rem;
+.container .self-info i:nth-child(8){
     position: absolute;
-    left:5.42rem;
-    z-index: 14;
-    top:10.6rem;
+    left:1.4rem;
+    top:3.9rem;
     opacity: 0;
-    -webkit-animation: fade 1s 14s both;
-    animation: fade 1s 14s both;
+    -webkit-animation: fade 1s 9.7s both;
+    animation: fade 1s 9.7s both;
+}
+.container .self-info i:nth-child(10){
+    position: absolute;
+    left:1.4rem;
+    top:5.2rem;
+    opacity: 0;
+    -webkit-animation: fade 1s 10.3s both;
+    animation: fade 1s 10.3s both;
+}
+.container .self-info i:nth-child(12){
+    position: absolute;
+    left:1.4rem;
+    top:6.5rem;
+    opacity: 0;
+    -webkit-animation: fade 1s 10.9s both;
+    animation: fade 1s 10.9s both;
 }
 /*slide2*/
 .container .wrapper .slide2{
@@ -523,9 +484,7 @@ html,body,.container,.wrapper{
     -webkit-animation:fade 1s 6.7s both;
     animation:fade 1s 6.7s both;
 }
-/*.container .slide2>i:nth-child(5){
-    top:10.1rem;
-}*/
+
 .container .slide2 span{
     font-family: 华文隶书;
     position: absolute;

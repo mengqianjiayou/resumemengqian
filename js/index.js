@@ -28,7 +28,8 @@ function autoMove() {
     setSlide();
 }
 var oBody = document.getElementById('body');
-oBody.timer = setInterval(autoMove,18000);
+
+oBody.timer = window.setInterval(autoMove,18000);
 oBody.addEventListener('touchstart',function(e){
      e = e||event;
     window.clearInterval(oBody.timer);
@@ -54,7 +55,7 @@ oBody.addEventListener('touchend',function(e){
         }
     }
     setSlide();
-    oBody.timer = setInterval(autoMove,18000);
+    oBody.timer = window.setInterval(autoMove,18000);
 });
 
 var pointer =document.getElementById('pointer');
