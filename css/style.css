@@ -483,11 +483,6 @@ html,body,.container,.wrapper{
     -webkit-animation:fade 1s 4.7s both;
     animation:fade 1s 4.7s both;
 }
-.container .slide2>i.four{
-    top:9.8rem;
-    -webkit-animation:fade 1s 6.7s both;
-    animation:fade 1s 6.7s both;
-}
 
 .container .slide2 span{
     font-family: 华文隶书;
@@ -512,11 +507,6 @@ html,body,.container,.wrapper{
     -webkit-animation:bounceInLeft 1s 5.2s both;
     animation:bounceInLeft 1s 5.2s both;
 }
-.container .slide2 span.four{
-    top:9.5rem;
-    -webkit-animation:bounceInLeft 1s 7.2s both;
-    animation:bounceInLeft 1s 7.2s both;
-}
 .container .slide2 p{
     font-family: 华文隶书;
     position: absolute;
@@ -536,14 +526,9 @@ html,body,.container,.wrapper{
     animation: fade 1s 3.7s both;
 }
 .container .slide2 p.three{
-    top:7.6rem;
+    top:7.2rem;
     -webkit-animation: fade 1s 5.7s both;
     animation: fade 1s 5.7s both;
-}
-.container .slide2 p.four{
-    top:9.6rem;
-    -webkit-animation: fade 1s 7.7s both;
-    animation: fade 1s 7.7s both;
 }
 .container .slide2>b{
     width:.01rem;
