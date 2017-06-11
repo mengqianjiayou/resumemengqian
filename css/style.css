@@ -43,6 +43,7 @@ html,body,.container,.wrapper{
         opacity:1;
     }
 }
+/*第一屏倒计时*/
 .content{
     color:#fff;
     position: relative;
@@ -51,29 +52,29 @@ html,body,.container,.wrapper{
     width:2.5rem;
     height:.72rem;
     font-family:华文隶书;
-    font-size: .72rem;
+    font-size: .68rem;
     position: absolute;
     display: block;
     left:1.3rem;
-    top:2.3rem;
+    top:2.5rem;
     -webkit-animation:fade linear 1.5s .3s both;
     animation:fade linear 1.5s .3s both;
 }
 .content span:nth-child(2){
     width:2.7rem;
-    height:.72rem;
+    height:.68rem;
     font-family:华文隶书;
     font-size: .72rem;
     position: absolute;
     display: block;
     left:3.9rem;
-    top:2.3rem;
+    top:2.5rem;
     -webkit-animation:fade linear 1.5s .7s both;
     animation:fade linear 1.5s .7s both;
 }
 .content span:nth-child(3){
     width:1.5rem;
-    height:.72rem;
+    height:.68rem;
     position: absolute;
     display: block;
     font-family:华文隶书;
@@ -84,14 +85,14 @@ html,body,.container,.wrapper{
     animation:fade linear 1.5s 1s  both,fadeout .1s 7.3s both;
 }
 .content span:nth-child(4){
-    width:3.5rem;
-    height:.72rem;
+    width:4rem;
+    height:.68rem;
     position: absolute;
     display: block;
     font-family:华文隶书;
     font-size: .72rem;
     left:2rem;
-    top:8.3rem;
+    top:8rem;
     -webkit-animation:fade linear 1.5s 1.2s  both;
     animation:fade linear 1.5s 1.2s  both;
 }
@@ -163,7 +164,7 @@ html,body,.container,.wrapper{
 }
 .container .square{
     position: absolute;
-    top:8.8rem;
+    top:8rem;
     left:.6rem;
     z-index:13;
     width:3rem;
@@ -288,7 +289,7 @@ html,body,.container,.wrapper{
 .container .introduct>p{
     overflow: hidden;
     height:1.7rem;
-    font-size: 1rem;
+    font-size: .8rem;
     color:#fff;
     line-height:1.7rem;
     padding-left:1rem;
@@ -296,7 +297,7 @@ html,body,.container,.wrapper{
     position: absolute;
     z-index: 2;
     left:0;
-    top:1rem;
+    top:1.5rem;
     -webkit-animation: fade 2s 7s both;
     animation: fade 2s 7s both;
 }
@@ -322,12 +323,11 @@ html,body,.container,.wrapper{
     height:5rem;
     position: absolute;
     left:0.6rem;
-    top:5.6rem;
+    top:4.5rem;
     opacity: 0;
     -webkit-animation: fade 1s 7.3s both;
     animation: fade 1s 7.3s both;
 }
-
 .container .self-info{
     width:4.1rem;
     height:9rem;
@@ -350,7 +350,7 @@ html,body,.container,.wrapper{
 .container .self-info span:nth-child(3){
     position: absolute;
     left:0;
-    top:1.3rem;
+    top:1rem;
     opacity: 0;
     -webkit-animation: fade 1s 7.3s both;
     animation: fade 1s 7.3s both;
@@ -358,7 +358,7 @@ html,body,.container,.wrapper{
 .container .self-info span:nth-child(5){
     position: absolute;
     left:0;
-    top:2.6rem;
+    top:2rem;
     opacity: 0;
     -webkit-animation: fade 1s 7.3s both;
     animation: fade 1s 7.3s both;
@@ -366,7 +366,7 @@ html,body,.container,.wrapper{
 .container .self-info span:nth-child(7){
     position: absolute;
     left:0;
-    top:3.9rem;
+    top:3rem;
     opacity: 0;
     -webkit-animation: fade 1s 7.3s both;
     animation: fade 1s 7.3s both;
@@ -374,7 +374,7 @@ html,body,.container,.wrapper{
 .container .self-info span:nth-child(9){
     position: absolute;
     left:0;
-    top:5.2rem;
+    top:4rem;
     opacity: 0;
     -webkit-animation: fade 1s 7.3s both;
     animation: fade 1s 7.3s both;
@@ -382,7 +382,7 @@ html,body,.container,.wrapper{
 .container .self-info span:nth-child(11){
     position: absolute;
     left:0;
-    top:6.5rem;
+    top:5rem;
     opacity: 0;
     -webkit-animation: fade 1s 7.3s both;
     animation: fade 1s 7.3s both;
@@ -398,7 +398,7 @@ html,body,.container,.wrapper{
 .container .self-info i:nth-child(4){
     position: absolute;
     left:1.4rem;
-    top:1.3rem;
+    top:1rem;
     opacity: 0;
     -webkit-animation: fade 1s 8.5s both;
     animation: fade 1s 8.5s both;
@@ -406,7 +406,7 @@ html,body,.container,.wrapper{
 .container .self-info i:nth-child(6){
     position: absolute;
     left:1.4rem;
-    top:2.6rem;
+    top:2rem;
     opacity: 0;
     -webkit-animation: fade 1s 9.1s both;
     animation: fade 1s 9.1s both;
@@ -414,7 +414,7 @@ html,body,.container,.wrapper{
 .container .self-info i:nth-child(8){
     position: absolute;
     left:1.4rem;
-    top:3.9rem;
+    top:3rem;
     opacity: 0;
     -webkit-animation: fade 1s 9.7s both;
     animation: fade 1s 9.7s both;
@@ -422,7 +422,7 @@ html,body,.container,.wrapper{
 .container .self-info i:nth-child(10){
     position: absolute;
     left:1.4rem;
-    top:5.2rem;
+    top:4rem;
     opacity: 0;
     -webkit-animation: fade 1s 10.3s both;
     animation: fade 1s 10.3s both;
@@ -430,7 +430,7 @@ html,body,.container,.wrapper{
 .container .self-info i:nth-child(12){
     position: absolute;
     left:1.4rem;
-    top:6.5rem;
+    top:5rem;
     opacity: 0;
     -webkit-animation: fade 1s 10.9s both;
     animation: fade 1s 10.9s both;
@@ -454,7 +454,7 @@ html,body,.container,.wrapper{
     height:.8rem;
     position: absolute;
     left:1.2rem;
-    top:1.6rem;
+    top:1.5rem;
     -webkit-animation:slideInLeft 1s both;
     animation:slideInLeft 1s both;
 }
@@ -745,8 +745,8 @@ html,body,.container,.wrapper{
     -webkit-animation: scaleChange2 linear 2s infinite both,fade 1s 1.2s both;
     animation: scaleChange2 linear 2s infinite both,fade 1s 1.2s both;
 }
-.container .slide3 .desc .npm-circle{
-    background: url("../img/npm.png") no-repeat center #100969;
+.container .slide3 .desc .react-circle{
+    background: url("../img/react.png") no-repeat center #100969;
     background-size: cover;
     transform: translateZ(1rem);
     left:.5rem;
@@ -830,8 +830,8 @@ html,body,.container,.wrapper{
 }
 .container .slide4 div{
     position: absolute;
-    top:4rem;
-    width:4.6rem;
+    top:3.5rem;
+    width:5.2rem;
     left:1.3rem;
     animation: fade 2s .3s both;
     -webkit-animation: fade 2s .3s both;
@@ -858,24 +858,16 @@ html,body,.container,.wrapper{
     color:#fff;
 }
 .container .slide5 p:nth-child(1){
-    margin-top:2rem;
+    margin-top:4rem;
     font-size: .72rem;
     -webkit-animation: rotateIn 1s 1 both;
     animation: rotateIn 1s 1 both;
 }
 .container .slide5 p:nth-child(2){
-    margin-top:.5rem;
+    margin-top:1rem;
     font-size: .6rem;
     -webkit-animation: rollInTop 1s 1s both;
     animation: rollInTop 1s 1s both;
-}
-.container .slide5 img{
-    width:3rem;
-    height:3rem;
-    display: block;
-    margin:2rem auto;
-    -webkit-animation: fade 1s 1.7s both;
-    animation: fade 1s 1.7s both;
 }
 @-webkit-keyframes rotateIn {
     0%{
@@ -950,15 +942,15 @@ html,body,.container,.wrapper{
 }
 /*音乐*/
 .music{
-    width:1rem;
-    height:1rem;
+    width:.8rem;
+    height:.8rem;
     box-shadow: 0 0 .2rem #fff;
     border-radius: 50%;
     background: url("../img/music-icon.png") no-repeat center;
     background-size: 70%;
     position: absolute;
-    right:.7rem;
-    top:.7rem;
+    right:1rem;
+    top:1rem;
     z-index: 20;
 }
 .musicMove{
