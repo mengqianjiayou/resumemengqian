@@ -52,11 +52,11 @@ html,body,.container,.wrapper{
     width:2.5rem;
     height:.72rem;
     font-family:华文隶书;
-    font-size: .68rem;
+    font-size: .6rem;
     position: absolute;
     display: block;
     left:1.3rem;
-    top:2.5rem;
+    top:1.8rem;
     -webkit-animation:fade linear 1.5s .3s both;
     animation:fade linear 1.5s .3s both;
 }
@@ -64,23 +64,23 @@ html,body,.container,.wrapper{
     width:2.7rem;
     height:.68rem;
     font-family:华文隶书;
-    font-size: .72rem;
+    font-size: .6rem;
     position: absolute;
     display: block;
     left:3.9rem;
-    top:2.5rem;
+    top:1.8rem;
     -webkit-animation:fade linear 1.5s .7s both;
     animation:fade linear 1.5s .7s both;
 }
 .content span:nth-child(3){
     width:1.5rem;
-    height:.68rem;
+    height:.6rem;
     position: absolute;
     display: block;
     font-family:华文隶书;
     font-size: .72rem;
     left:3rem;
-    top:3.7rem;
+    top:3rem;
     -webkit-animation:fade linear 1.5s 1s  both,fadeout .1s 7.3s both;
     animation:fade linear 1.5s 1s  both,fadeout .1s 7.3s both;
 }
@@ -90,9 +90,9 @@ html,body,.container,.wrapper{
     position: absolute;
     display: block;
     font-family:华文隶书;
-    font-size: .72rem;
+    font-size: .6rem;
     left:2rem;
-    top:8rem;
+    top:7.3rem;
     -webkit-animation:fade linear 1.5s 1.2s  both;
     animation:fade linear 1.5s 1.2s  both;
 }
@@ -101,7 +101,7 @@ html,body,.container,.wrapper{
     height:2.88rem;
     position: absolute;
     left:2.65rem;
-    top:5rem;
+    top:4.3rem;
     background: url("../img/slide-1-number.png") no-repeat;
     background-size: 9.6rem 2.88rem;
     background-position: -4rem 0;
@@ -297,7 +297,7 @@ html,body,.container,.wrapper{
     position: absolute;
     z-index: 2;
     left:0;
-    top:1.5rem;
+    top:1rem;
     -webkit-animation: fade 2s 7s both;
     animation: fade 2s 7s both;
 }
@@ -336,7 +336,7 @@ html,body,.container,.wrapper{
     color: #fff7f4;
     position: absolute;
     right:0;
-    top:3.8rem;
+    top:3.4rem;
     z-index:14;
 }
 .container .self-info span:nth-child(1){
@@ -454,7 +454,7 @@ html,body,.container,.wrapper{
     height:.8rem;
     position: absolute;
     left:1.2rem;
-    top:1.5rem;
+    top:1rem;
     -webkit-animation:slideInLeft 1s both;
     animation:slideInLeft 1s both;
 }
@@ -469,17 +469,17 @@ html,body,.container,.wrapper{
     opacity: 0;
 }
 .container .slide2>i.one{
-    top:3.8rem;
+    top:3rem;
     -webkit-animation:fade 1s .7s both;
     animation:fade 1s .7s both;
 }
 .container .slide2>i.two{
-    top:5.8rem;
+    top:5rem;
     -webkit-animation:fade 1s 2.7s both;
     animation:fade 1s 2.7s both;
 }
 .container .slide2>i.three{
-    top:7.8rem;
+    top:7rem;
     -webkit-animation:fade 1s 4.7s both;
     animation:fade 1s 4.7s both;
 }
@@ -491,19 +491,19 @@ html,body,.container,.wrapper{
     color:#fff;
     font-size: .4rem;
     width:1.1rem;
-    top:3.5rem;
 }
 .container .slide2 span.one{
+    top:2.7rem;
     -webkit-animation:bounceInLeft 1s 1.2s both ;
     animation:bounceInLeft 1s 1.2s both ;
 }
 .container .slide2 span.two{
-    top:5.5rem;
+    top:4.7rem;
     -webkit-animation:bounceInLeft 1s 3.2s both;
     animation:bounceInLeft 1s 3.2s both;
 }
 .container .slide2 span.three{
-    top:7.5rem;
+    top:6.7rem;
     -webkit-animation:bounceInLeft 1s 5.2s both;
     animation:bounceInLeft 1s 5.2s both;
 }
@@ -514,19 +514,19 @@ html,body,.container,.wrapper{
     color:#fff;
     font-size: .48rem;
     width:3.8rem;
-    top:3.6rem;
 }
 .container .slide2 p.one{
+    top:2.9rem;
     -webkit-animation: fade 1s 1.7s both;
     animation: fade 1s 1.7s both;
 }
 .container .slide2 p.two{
-    top:5.6rem;
+    top:4.9rem;
     -webkit-animation: fade 1s 3.7s both;
     animation: fade 1s 3.7s both;
 }
 .container .slide2 p.three{
-    top:7.2rem;
+    top:6.5rem;
     -webkit-animation: fade 1s 5.7s both;
     animation: fade 1s 5.7s both;
 }
@@ -537,21 +537,16 @@ html,body,.container,.wrapper{
     display: block;
     position: absolute;
     left:2.51rem;
-    top:3.8rem;
 }
 .container .slide2 b.one{
+    top:3rem;
     -webkit-animation:bHeight 1s 2.2s both;
     animation:bHeight 1s 2.2s both;
 }
 .container .slide2 b.two{
-    top:5.8rem;
+    top:5rem;
     -webkit-animation:bHeight 1s 4.2s both;
     animation:bHeight 1s 4.2s both;
-}
-.container .slide2 b.three{
-    top:7.8rem;
-    -webkit-animation:bHeight 1s 6.2s both;
-    animation:bHeight 1s 6.2s both;
 }
 @-webkit-keyframes slideInLeft {
     from {
@@ -674,14 +669,14 @@ html,body,.container,.wrapper{
     font-weight:900;
     position: absolute;
     left:1.3rem;
-    top:1.8rem;
+    top:1rem;
     color:#fff;
     -webkit-animation: slideInLeft 1s both;
     animation: slideInLeft 1s both;
 }
 .container .slide3 .desc{
     position: absolute;
-    top:3.2rem;
+    top:2.4rem;
     perspective:2000px;
     transform-style: preserve-3d;
 }
@@ -700,66 +695,62 @@ html,body,.container,.wrapper{
     background-size: cover;
     transform: translateZ(-10rem);
     left:1.5rem;
-    -webkit-animation: scaleChange linear 1.8s infinite both,fade 1s .4s both;
-    animation: scaleChange linear 1.8s infinite both,fade 1s .4s both;
+    -webkit-animation: scaleChange linear 1s alternate infinite both,fade 1s .4s both;
+    animation: scaleChange linear 1s alternate infinite both,fade 1s .4s both;
 }
 .container .slide3 .desc .html-circle{
     background: url("../img/html.png") no-repeat center #100969;
     background-size: cover;
     transform: translateZ(10rem);
-    left:3.6rem;
+    left:3.4rem;
     top:1.2rem;
-    -webkit-animation: scaleChange2 linear 2s infinite both,fade 1s .8s both;
-    animation: scaleChange2 linear 2s infinite both,fade 1s .8s both;
+    -webkit-animation: scaleChange2 linear 1s alternate infinite both,fade 1s .8s both;
+    animation: scaleChange2 linear 1s alternate infinite both,fade 1s .8s both;
 }
 .container .slide3 .desc .js-circle{
     background: url("../img/js.png") no-repeat center #100969;
     background-size: cover;
     transform: translateZ(5rem);
     left:1.5rem;
-    top:2.3rem;
-    -webkit-animation: scaleChange linear 2s infinite both,fade 1s 2.4s both;
-    animation: scaleChange linear 2s infinite both,fade 1s 2.4s both;
+    top:2rem;
+    -webkit-animation: scaleChange linear 1s alternate infinite both,fade 1s 2.4s both;
+    animation: scaleChange linear 1s alternate infinite both,fade 1s 2.4s both;
 }
 .container .slide3 .desc .vue-circle{
     background: url("../img/vue.png") no-repeat center #100969;
     background-size: cover;
     transform: translateZ(-5rem);
     left:4.5rem;
-    top:4.5rem;
-    -webkit-animation: scaleChange2 linear 2s infinite both,fade 1s 1.2s both;
-    animation: scaleChange2 linear 2s infinite both,fade 1s 1.2s both;
+    top:4.3rem;
+    -webkit-animation: scaleChange2 linear 1s alternate infinite both,fade 1s 1.2s both;
+    animation: scaleChange2 linear 1s alternate infinite both,fade 1s 1.2s both;
 }
 .container .slide3 .desc .react-circle{
     background: url("../img/react.png") no-repeat center #100969;
     background-size: cover;
     transform: translateZ(1rem);
     left:.5rem;
-    top:5.5rem;
-    -webkit-animation: scaleChange linear 2.5s infinite both,fade 1s 1.6s both;
-    animation: scaleChange linear 2.5s infinite both,fade 1s 1.6s both;
+    top:5rem;
+    -webkit-animation: scaleChange linear 1.2s alternate infinite both,fade 1s 1.6s both;
+    animation: scaleChange linear 1.2s alternate infinite both,fade 1s 1.6s both;
 }
 .container .slide3 .desc .node-circle{
     background: url("../img/node.png") no-repeat center #100969;
     background-size: cover;
     transform: translateZ(7rem);
-    left:4.5rem;
-    top:5.5rem;
-    -webkit-animation: scaleChange linear 2s infinite both,fade 1s 2s both;
-    animation: scaleChange linear 2s infinite both,fade 1s 2s both;
+    left:4rem;
+    top:5rem;
+    -webkit-animation: scaleChange linear 1s alternate infinite both,fade 1s 2s both;
+    animation: scaleChange linear 1s alternate infinite both,fade 1s 2s both;
 }
 @-webkit-keyframes scaleChange {
     0%{
         width:1.3rem;
         height:1.3rem;
     }
-    50%{
+    100%{
         width:1.1rem;
         height:1.1rem;
-    }
-    100%{
-        width:1.3rem;
-        height:1.3rem;
     }
 }
 @keyframes scaleChange {
@@ -767,13 +758,9 @@ html,body,.container,.wrapper{
         width:1.3rem;
         height:1.3rem;
     }
-    50%{
+    100%{
         width:1.1rem;
         height:1.1rem;
-    }
-    100%{
-        width:1.3rem;
-        height:1.3rem;
     }
 }
 @-webkit-keyframes scaleChange2 {
@@ -781,13 +768,9 @@ html,body,.container,.wrapper{
         width:1.1rem;
         height:1.1rem;
     }
-    50%{
+    100%{
         width:1.3rem;
         height:1.3rem;
-    }
-    100%{
-        width:1.1rem;
-        height:1.1rem;
     }
 }
 @keyframes scaleChange2 {
@@ -795,13 +778,9 @@ html,body,.container,.wrapper{
         width:1.1rem;
         height:1.1rem;
     }
-    50%{
+    100%{
         width:1.3rem;
         height:1.3rem;
-    }
-    100%{
-        width:1.1rem;
-        height:1.1rem;
     }
 }
 .container .slide4{
@@ -815,7 +794,7 @@ html,body,.container,.wrapper{
 }
 .container .slide4 div{
     position: absolute;
-    top:3.5rem;
+    top:2.5rem;
     width:5.2rem;
     left:1.3rem;
     animation: fade 2s .3s both;
@@ -843,7 +822,7 @@ html,body,.container,.wrapper{
     color:#fff;
 }
 .container .slide5 p:nth-child(1){
-    margin-top:4rem;
+    margin-top:3.5rem;
     font-size: .72rem;
     -webkit-animation: rotateIn 1s 1 both;
     animation: rotateIn 1s 1 both;
